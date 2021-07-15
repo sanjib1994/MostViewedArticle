@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -51,7 +53,7 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
                 Glide.with(context).load(R.drawable.photo).into(holder.image);
             }
 
-            holder.imageRight.setOnClickListener(new View.OnClickListener() {
+            holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -83,6 +85,7 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
 
         TextView textTile,textAuthor,textDate;
         ImageView image,imageRight;
+        RelativeLayout relativeLayout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -92,6 +95,7 @@ public class ArticleListAdapter extends RecyclerView.Adapter<ArticleListAdapter.
             textDate = itemView.findViewById(R.id.date);
             image = itemView.findViewById(R.id.image);
             imageRight = itemView.findViewById(R.id.right_arrow);
+            relativeLayout = itemView.findViewById(R.id.lin);
         }
     }
 }
