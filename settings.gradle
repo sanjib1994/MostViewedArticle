@@ -1,0 +1,2 @@
+rootProject.name = "MostViewArticle"
+include ':app'
